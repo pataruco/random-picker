@@ -1,3 +1,3 @@
 $(document).ready(function(){
-  console.log('hola');
+  var students = [`Stella`, `Michael`, `Mathew`, `Ella`, `Elishea`, `Zakira`, `Kieran`, `Kart`, `Aaron`, `Monika`, `Kart`, `Jun`, `Lee`];
 });
