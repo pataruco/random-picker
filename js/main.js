@@ -8,7 +8,7 @@ $(document).ready(function(){
 
   function renderStudents () {
     for (let i = 0; i < students.length; i++) {
-      $ready.append(`<span class="student">${students[i]} </span>`);
+      $ready.append(`<span class="student animated infinite flash">${students[i]} </span>`);
     }
   }
 
