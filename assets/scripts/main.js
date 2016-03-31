@@ -17,7 +17,11 @@ $(document).ready(function(){
     let studentToRemove = students.indexOf(studentToPick);
     students.splice(studentToRemove, 1);
     $go.empty();
-    $go.append(`<h1 class="student animated tada">${studentToPick}</h1>`);
+    if (students.length === 0) {
+      $go.append(`<h1 class="pub student animated tada pub">Let's go to to the Pub </h1>`);
+    } else {
+      $go.append(`<h1 class="student animated tada">${studentToPick}</h1>`);
+    }
     $('#drum')[0].play();
     $ready.empty();
     renderStudents();
