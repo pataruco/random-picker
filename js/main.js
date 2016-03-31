@@ -1,9 +1,8 @@
 $(document).ready(function(){
   //Variables
-  var students = [`Stella`, `Michael`, `Mathew`, `Ella`, `Elishea`, `Zakira`, `Kieran`, `Kart`, `Aaron`, `Monika`, `Jun`, `Lee`];
+  var students = [`Stella`, `Michael`, `Mathew`, `Ella`, `Elishea`, `Kieran`, `Kart`, `Aaron`, `Monika`, `Jun`, `Lee`];
   var $ready = $('#ready');
   var $go = $('#go');
-  var $drum = $('#drum');
 
   //methods
 
@@ -13,7 +12,8 @@ $(document).ready(function(){
     }
   }
 
-  function pickStudent () {
+  function pickStudent (e) {
+    e.preventDefault();
     let studentToPick = students[Math.floor(Math.random() * students.length)];
     let studentToRemove = students.indexOf(studentToPick);
     students.splice(studentToRemove, 1);
@@ -23,9 +23,6 @@ $(document).ready(function(){
     $ready.empty();
     renderStudents();
   }
-
-
-
   //Event listeners
   $(window).on('load', renderStudents);
   $('#next').on('click', pickStudent);
