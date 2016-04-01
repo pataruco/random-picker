@@ -21,6 +21,10 @@ $(document).ready(function(){
       $go.append(`<h1 class="pub student animated tada pub">Let's go to to the Pub </h1>`);
     } else {
       $go.append(`<h1 class="student animated tada">${studentToPick}</h1>`);
+      $('#drum')[0].play();
+      setTimeout(function(){
+        renderStudent(animation, studentToPick);
+      }, 2000);
     }
     $('#drum')[0].play();
     $ready.empty();
