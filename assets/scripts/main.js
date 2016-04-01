@@ -6,28 +6,32 @@ $(document).ready(function(){
 
   //methods
   function renderStudents () {
+    $ready.empty();
     for (let i = 0; i < students.length; i++) {
       $ready.append(`<span>${students[i]} </span>`);
     }
+  }
+
+  function renderStudent(className, innerText) {
+    $go.empty();
+    $go.append(`<h1 class="${className}">${innerText}</h1>`);
   }
 
   function pickStudent (e) {
     e.preventDefault();
     let studentToPick = students[Math.floor(Math.random() * students.length)];
     let studentToRemove = students.indexOf(studentToPick);
+    let animation = `animated tada`;
     students.splice(studentToRemove, 1);
-    $go.empty();
+    renderStudent(`waiting`, `...`);
     if (students.length === 0) {
-      $go.append(`<h1 class="pub student animated tada pub">Let's go to to the Pub </h1>`);
+      renderStudent(animation, `Let's go to the Pub `);
     } else {
-      $go.append(`<h1 class="student animated tada">${studentToPick}</h1>`);
       $('#drum')[0].play();
       setTimeout(function(){
         renderStudent(animation, studentToPick);
       }, 2000);
     }
-    $('#drum')[0].play();
-    $ready.empty();
     renderStudents();
   }
   //Event listeners
