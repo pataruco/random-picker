@@ -11,7 +11,7 @@ $(document).ready(function(){
   function renderStudents () {
     $ready.empty();
     for (let i = 0; i < students.length; i++) {
-      $ready.append(`<span>${students[i]} </span>`);
+      $ready.append(`<span>${students[i]}, </span>`);
     }
   }
 
