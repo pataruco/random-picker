@@ -3,7 +3,7 @@ $(document).ready(function(){
   // var students = [`Stella`, `Michael`, `Mathew`, `Ella`, `Elishea`, `Kieran`, `Kart`, `Aaron`, `Monika`, `Jun`, `Lee`]; // fewd 31
   //let students = ['Cameron','Francesca','Guy','Hila','Jamie','Javier','Jo','Joseph','Keith','Lisa','Lucie','Martin','Nick','Rory','Tanny']; // fewd 33
 
-  let students = ['Chima', 'Matt', 'Nini'] // js 1
+  let students = ['Chima', 'Matt', 'Nini', 'Dario', 'Mercedes', 'Hanna', 'Julia', 'Ralph', 'Luke']; // js 1
   var $ready = $('#ready');
   var $go = $('#go');
 
