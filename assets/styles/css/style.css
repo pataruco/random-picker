@@ -52,6 +52,11 @@ img {
 span {
   line-height: 2em;
   font-size: 1.2rem; }
+  span:after {
+    content: ", ";
+    margin-left: -0.25em; }
+  span:last-of-type:after {
+    display: none; }
 
 .ready {
   margin-top: 3rem;

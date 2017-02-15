@@ -64,6 +64,14 @@ img {
 span {
   line-height: 2em;
   font-size: 1.2rem;
+
+	&:after {
+		content:", ";
+		margin-left:-0.25em;
+	}
+	&:last-of-type:after {
+		display:none;
+	}
 }
 
 .ready {
