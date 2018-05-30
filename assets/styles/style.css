@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+html,
+body {
+  width: 100%;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 8rem;
+  line-height: 0.5em;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+header {
+  width: 80%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100% auto;
+  height: auto;
+  width: 50%;
+}
+
+.img-wrapper {
+  width: 45%;
+}
+
+.go {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.set {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.next {
+  font-size: 6rem;
+  padding: 0.25em;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+  text-decoration: none;
+  border: 2px solid white;
+}
+.next:hover,
+.next:active {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+span {
+  line-height: 2em;
+  font-size: 1.2rem;
+}
+span:after {
+  content: ", ";
+  margin-left: -0.25em;
+}
+span:last-of-type:after {
+  display: none;
+}
+
+.ready {
+  margin: 0;
+  margin-top: 3rem;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+.ready li {
+  font-size: 1.25rem;
+}
+
+.ready li::before {
+  content: ", ";
+}
+
+.ready li:first-of-type::before {
+  content: "";
+}
+
+.waiting {
+  color: white;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.tada {
+  animation-name: tada;
+}

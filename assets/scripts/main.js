@@ -1,49 +1,76 @@
-$(document).ready(function(){
-  //Variables
-  // var students = [`Stella`, `Michael`, `Mathew`, `Ella`, `Elishea`, `Kieran`, `Kart`, `Aaron`, `Monika`, `Jun`, `Lee`]; // fewd 31
-  //let students = ['Cameron','Francesca','Guy','Hila','Jamie','Javier','Jo','Joseph','Keith','Lisa','Lucie','Martin','Nick','Rory','Tanny']; // fewd 33
+document.addEventListener("DOMContentLoaded", () => {
+  //   // var students = [`Stella`, `Michael`, `Mathew`, `Ella`, `Elishea`, `Kieran`, `Kart`, `Aaron`, `Monika`, `Jun`, `Lee`]; // fewd 31
+  //   //let students = ['Cameron','Francesca','Guy','Hila','Jamie','Javier','Jo','Joseph','Keith','Lisa','Lucie','Martin','Nick','Rory','Tanny']; // fewd 33
+  //   // let students = ['Chima', 'Matt', 'Nini', 'Dario', 'Mercedes', 'Hanna', 'Julia', 'Ralph', 'Luke']; // js 1
+  //   // let students = ['Victor', 'Charlie', 'Miguel', 'Gareth', 'Petya', 'Ella', 'Guillaume', 'Tim', 'Tom', 'Therese', 'George']; js3
+  let students = [
+    "Ezoe",
+    "Alison",
+    "Amy",
+    "Chioma",
+    "Chloe",
+    "Danny",
+    "Siobhan",
+    "Ejiro",
+    "Hayley",
+    "Jeng",
+    "John",
+    "Latreya",
+    "Lola",
+    "Mary B",
+    "Mary O",
+    "Michael",
+    "Shaniss",
+    "Shezell",
+    "Sophie"
+  ].sort(); // ldn pipeline
 
-  // let students = ['Chima', 'Matt', 'Nini', 'Dario', 'Mercedes', 'Hanna', 'Julia', 'Ralph', 'Luke']; // js 1
-  // let students = ['Victor', 'Charlie', 'Miguel', 'Gareth', 'Petya', 'Ella', 'Guillaume', 'Tim', 'Tom', 'Therese', 'George'];
-  let students = ['Yaz', 'Sandra', 'Suzannah', 'Dilraj', 'Danai', 'Dan', 'Magda', 'Luice', 'Crispy', 'Natalia'].sort();
-  var $ready = $('#ready');
-  var $go = $('#go');
+  const studentReadyList = document.getElementById("ready");
+  const nextButton = document.getElementById("next");
+  const goContainer = document.getElementById("go");
+  const drumPlayer = document.getElementById("drum");
 
-  //methods
-  function renderStudents () {
-    $ready.empty();
-    for (let i = 0; i < students.length; i++) {
-      $ready.append(`<span>${students[i]} </span>`);
-    }
-  }
+  const renderStudents = () => {
+    studentReadyList.innerHTML = "";
+    students.map(student => {
+      const text = document.createTextNode(`${student} `);
+      const li = document.createElement("li");
+      li.appendChild(text);
+      studentReadyList.appendChild(li);
+    });
+  };
 
-  function renderStudent(className, innerText) {
-    $go.empty();
-    $go.append(`<h1 class="${className}">${innerText}</h1>`);
-	setTimeout( function(){
-		$ready.fadeTo( 500, 1 );
-	}, 3000);
-  }
+  const renderStudent = (className, innerText) => {
+    goContainer.innerHTML = "";
+    const h1 = document.createElement("h1");
+    const text = document.createTextNode(innerText);
+    h1.classList = className;
+    h1.appendChild(text);
+    goContainer.appendChild(h1);
+    setTimeout(() => {
+      studentReadyList.style.opacity = 1;
+    }, 2000);
+  };
 
-  function pickStudent (e) {
-    e.preventDefault();
+  const pickStudent = event => {
+    event.preventDefault();
     let studentToPick = students[Math.floor(Math.random() * students.length)];
     let studentToRemove = students.indexOf(studentToPick);
     let animation = `animated tada`;
-	$ready.css( 'opacity', 0 );
+    studentReadyList.style.opacity = 0;
     students.splice(studentToRemove, 1);
     renderStudent(`waiting`, `...`);
-    if (typeof studentToPick === 'undefined' ) {
+    if (typeof studentToPick === "undefined") {
       renderStudent(animation, `Let's go to the Pub `);
     } else {
-      $('#drum')[0].play();
-      setTimeout(function(){
+      drumPlayer.play();
+      setTimeout(() => {
         renderStudent(animation, studentToPick);
       }, 2000);
     }
     renderStudents();
-  }
-  //Event listeners
-  $(window).on('load', renderStudents);
-  $('#next').on('click', pickStudent);
-});
+  };
+
+  nextButton.addEventListener("click", pickStudent);
+  window.addEventListener("load", renderStudents);
+}); // end of document
