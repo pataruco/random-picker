@@ -21,7 +21,8 @@ h2 {
   font-size: 2rem;
 }
 
-header {
+header,
+main {
   width: 80%;
   margin: 0 auto;
 }
@@ -63,43 +64,29 @@ img {
   border: 2px solid black;
 }
 
-span {
-  line-height: 2em;
-  font-size: 1.2rem;
-}
-span:after {
-  content: ", ";
-  margin-left: -0.25em;
-}
-span:last-of-type:after {
-  display: none;
-}
-
 .ready {
   margin: 0;
   margin-top: 3rem;
   padding: 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   list-style: none;
   justify-content: center;
   transition: opacity 0.5s ease;
 }
 
-.ready li {
-  font-size: 1.25rem;
+.ready li span {
+  line-height: 2em;
+  font-size: 1.2rem;
 }
 
-.ready li::before {
-  content: ", ";
+.ready li span::after {
+  content: ', \0000a0';
 }
 
-.ready li:first-of-type::before {
-  content: "";
-}
-
-.waiting {
-  color: white;
+.ready li:last-of-type span::after {
+  content: '';
 }
 
 .animated {
