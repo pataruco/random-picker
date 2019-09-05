@@ -3,27 +3,20 @@ document.addEventListener('DOMContentLoaded', () => {
   //   //let students = ['Cameron','Francesca','Guy','Hila','Jamie','Javier','Jo','Joseph','Keith','Lisa','Lucie','Martin','Nick','Rory','Tanny']; // fewd 33
   //   // let students = ['Chima', 'Matt', 'Nini', 'Dario', 'Mercedes', 'Hanna', 'Julia', 'Ralph', 'Luke']; // js 1
   //   // let students = ['Victor', 'Charlie', 'Miguel', 'Gareth', 'Petya', 'Ella', 'Guillaume', 'Tim', 'Tom', 'Therese', 'George']; js3
+  // let students = ['Ezoe','Alison','Amy','Chioma','Chloe','Danny','Siobhan','Ejiro','Hayley','Jeng','John','Latreya','Lola','Mary B','Mary O','Michael','Shaniss','Shezell','Sophie',
+  // ].sort(); // ldn pipeline
+
   let students = [
-    'Ezoe',
-    'Alison',
-    'Amy',
-    'Chioma',
-    'Chloe',
-    'Danny',
-    'Siobhan',
-    'Ejiro',
-    'Hayley',
-    'Jeng',
-    'John',
-    'Latreya',
-    'Lola',
-    'Mary B',
-    'Mary O',
-    'Michael',
-    'Shaniss',
-    'Shezell',
-    'Sophie',
-  ].sort(); // ldn pipeline
+    'Alex T',
+    'Alex W',
+    'Benoit',
+    'Conny',
+    'Giovanna',
+    'Julien',
+    'Sebastian',
+    'Sophia',
+    'Ursula',
+  ].sort();
 
   const studentReadyList = document.getElementById('ready');
   const nextButton = document.getElementById('next');
