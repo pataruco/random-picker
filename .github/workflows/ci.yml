@@ -17,5 +17,3 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: .
-          CLEAN: true
-          ACTIONS_STEP_DEBUG: true
