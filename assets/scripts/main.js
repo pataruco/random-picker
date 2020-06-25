@@ -1,21 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-  //   // var students = [`Stella`, `Michael`, `Mathew`, `Ella`, `Elishea`, `Kieran`, `Kart`, `Aaron`, `Monika`, `Jun`, `Lee`]; // fewd 31
-  //   //let students = ['Cameron','Francesca','Guy','Hila','Jamie','Javier','Jo','Joseph','Keith','Lisa','Lucie','Martin','Nick','Rory','Tanny']; // fewd 33
-  //   // let students = ['Chima', 'Matt', 'Nini', 'Dario', 'Mercedes', 'Hanna', 'Julia', 'Ralph', 'Luke']; // js 1
-  //   // let students = ['Victor', 'Charlie', 'Miguel', 'Gareth', 'Petya', 'Ella', 'Guillaume', 'Tim', 'Tom', 'Therese', 'George']; js3
-  // let students = ['Ezoe','Alison','Amy','Chioma','Chloe','Danny','Siobhan','Ejiro','Hayley','Jeng','John','Latreya','Lola','Mary B','Mary O','Michael','Shaniss','Shezell','Sophie',
-  // ].sort(); // ldn pipeline
-
   let students = [
-    'Alex T',
-    'Alex W',
-    'Benoit',
-    'Conny',
-    'Giovanna',
-    'Julien',
-    'Sebastian',
-    'Sophia',
-    'Ursula',
+    'Caitlin',
+    'Nick',
+    'Christopher',
+    'Dominique',
+    'Graham',
+    'Guillaume',
+    'Liam',
+    'Marco',
+    'Marzia',
+    'Samantha',
+    'Sara ',
   ].sort();
 
   const studentReadyList = document.getElementById('ready');
@@ -25,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const renderStudents = () => {
     studentReadyList.innerHTML = '';
-    students.map(student => {
+    students.map((student) => {
       const text = document.createTextNode(`${student}`);
       const li = document.createElement('li');
       const span = document.createElement('span');
@@ -47,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2000);
   };
 
-  const pickStudent = event => {
+  const pickStudent = (event) => {
     event.preventDefault();
     let studentToPick = students[Math.floor(Math.random() * students.length)];
     let studentToRemove = students.indexOf(studentToPick);
