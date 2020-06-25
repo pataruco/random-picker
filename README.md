@@ -12,7 +12,30 @@
 
 ## How to run it?
 
-`cd random-picker`
-`open index.html`
+- Go to folder `random-picker`
+  ```sh
+  cd random-picker
+  ```
+- Open `index.html` in a browswer
+
+  ```sh
+  open index.html
+  ```
+
+## Deploy
+
+- Create a tag with the following syntax
+
+  ```sh
+  git tag FEWD*
+  ```
+
+- Push release tag
+
+  ```sh
+  git push --tag
+  ```
+
+- Open in the browser **[pataruco.github.io/random-picker/](pataruco.github.io/random-picker/)**
 
 Made with :heart: by [Pedro](https://github.com/pataruco), [John](https://github.com/jadshead), and [James](https://github.com/jmsherry).
