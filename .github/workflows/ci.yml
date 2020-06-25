@@ -18,3 +18,4 @@ jobs:
           BRANCH: gh-pages
           FOLDER: .
           CLEAN: true
+          ACTIONS_STEP_DEBUG: true
