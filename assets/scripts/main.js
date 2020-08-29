@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'Marino',
     'Mario',
     'Nieves',
-    'Noelia',
     'Oscar',
     'Victor',
     'Yerell',
