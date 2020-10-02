@@ -1,15 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
   let students = [
-    `JaShante'`,
-    'Avonte',
-    'Kimberly',
-    'Marie',
-    'Andy',
-    'Angie',
-    'Tom',
-    'Charlene',
-    'Charlie',
-  ].sort();
+    'Alejandro',
+    'Alicia',
+    'Ariel',
+    'Carlos',
+    'Carmen',
+    'Daniel',
+    'Diego',
+    'Eduardo',
+    'Gerardo',
+    'German',
+    'Ismael',
+    'Jefferson',
+    'José',
+    'José',
+    'Mariano',
+    'Mario',
+    'Victor',
+    'Yerell',
+  ];
 
   const studentReadyList = document.getElementById('ready');
   const nextButton = document.getElementById('next');
