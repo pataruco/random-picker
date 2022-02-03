@@ -3,6 +3,7 @@ on:
   push:
     tags:
       - 'FEWD*'
+      - 'JSD*'
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

@@ -1,25 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let students = [
-    'Adeela',
-    'Charles',
-    'Desi',
-    'Esme',
-    'Esme',
-    'Jamie',
-    'Jay',
-    'Jenny',
-    'Jose',
-    'Kaitlyn',
-    'Katherine',
-    'Marcel',
-    'Michael',
-    'Mohamed',
-    'Richard',
-    'Ross',
-    'Samuel',
-    'Steven',
-    'Yann',
-  ];
+  let students = ['Alex', 'Mareen', 'Chris', 'Jay', 'Abderahim'];
 
   const studentReadyList = document.getElementById('ready');
   const nextButton = document.getElementById('next');
